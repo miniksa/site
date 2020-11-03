@@ -1,4 +1,4 @@
-baseURL: 'https://niksa.dev'
+baseURL: 'https://www.niksa.dev'
 title: Niksa.dev
 paginate: 5
 theme: hugo-PaperMod
