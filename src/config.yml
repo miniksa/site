@@ -1,0 +1,35 @@
+baseURL: 'https://www.niksa.dev'
+title: Niksa.dev
+paginate: 5
+theme: PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  profileMode:
+    enabled: true # needs to be explicitly set
+    title: Niksa.dev
+    # imageUrl: '<img location>'
+    # imageTitle: my image
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
+      #- name: Archives
+      #  url: archives
+      - name: About
+        url: about
+
+  socialIcons:
+    - name: twitter
+      url: 'https://twitter.com/michaelniksa'
+    - name: github
+      url: 'https://github.com/miniksa'
