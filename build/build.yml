@@ -9,7 +9,7 @@ variables:
   blog.artifact: 'drop'
   blog.path: './src'
   hugo.version: '0.91.2'
-  azure.blobContainer: '`$web'
+  azure.blobContainer: '`$web' # backtick is to escape for Powershell
   azure.subscription: 'NiksaSiteAzureConnection'
   azure.keyVaultName: 'niksasitekeys'
   azure.resourceGroup: 'niksadevsite'
@@ -71,5 +71,5 @@ stages:
         scriptLocation: inlineScript
         inlineScript: |
           az storage blob delete-batch -s "$(azure.blobContainer)" --connection-string "$(AZURE-STORAGE-CONNECTION-STRING)"
-          az storage blob upload-batch -d "$(azure.blobContainer)" -s "$(Pipeline.Workspace)/$(blog.artifact)" --connection-string "$(AZURE-STORAGE-CONNECTION-STRING)"
+          az storage blob upload-batch -d "$(azure.blobContainer)" -s "$(Pipeline.Workspace)" --connection-string "$(AZURE-STORAGE-CONNECTION-STRING)"
           az cdn endpoint purge -n "$(azure.cdnEndpointName)" --profile-name "$(azure.cdnProfileName)" --content-paths "/*" --resource-group "$(azure.resourceGroup)" --no-wait
