@@ -54,8 +54,8 @@ stages:
     steps:
     - task: AzureKeyVault@2
       inputs:
-        connectedServiceName: '${{azure.subscription}}'
-        keyVaultName: '${{azure.keyVaultName}}'
+        connectedServiceName: '${{variables.azure.subscription}}'
+        keyVaultName: '${{variables.azure.keyVaultName}}'
     - task: DownloadPipelineArtifact@2
       displayName: 'Fetch from Artifact Store'
       inputs:
@@ -65,7 +65,7 @@ stages:
     - task: AzureCLI@2
       displayName: 'Send artifact to blob storage'
       inputs:
-        azureSubscription: '${{azure.subscription}}'
+        azureSubscription: '${{variables.azure.subscription}}'
         scriptType: pscore
         scriptLocation: inlineScript
         inlineScript: |
@@ -74,7 +74,7 @@ stages:
     - task: AzureCLI@2
       displayName: 'Purge CDN content'
       inputs:
-        azureSubscription: '${{azure.subscription}}'
+        azureSubscription: '${{variables.azure.subscription}}'
         scriptType: pscore
         scriptLocation: inlineScript
         inlineScript: |
