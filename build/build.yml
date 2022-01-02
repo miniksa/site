@@ -9,7 +9,7 @@ variables:
   blog.artifact: 'drop'
   blog.path: './src'
   hugo.version: '0.91.2'
-  azure.blobContainer: '\$web'
+  azure.blobContainer: '`$web'
   azure.subscription: 'NiksaSiteAzureConnection'
   azure.keyVaultName: 'niksasitekeys'
   azure.resourceGroup: 'niksadevsite'
@@ -64,7 +64,7 @@ stages:
         artifact: '$(blog.artifact)'
         path: $(Pipeline.Workspace)
     - task: AzureCLI@2
-      displayName: 'Send artifact to blob storage'
+      displayName: 'Send artifact to blob storage and purge CDN'
       inputs:
         azureSubscription: '$(azure.subscription)'
         scriptType: pscore
@@ -72,11 +72,4 @@ stages:
         inlineScript: |
           az storage blob delete-batch -s "$(azure.blobContainer)" --connection-string "$(AZURE-STORAGE-CONNECTION-STRING)"
           az storage blob upload-batch -d "$(azure.blobContainer)" -s "$(Pipeline.Workspace)/$(blog.artifact)" --connection-string "$(AZURE-STORAGE-CONNECTION-STRING)"
-    - task: AzureCLI@2
-      displayName: 'Purge CDN content'
-      inputs:
-        azureSubscription: '$(azure.subscription)'
-        scriptType: pscore
-        scriptLocation: inlineScript
-        inlineScript: |
           az cdn endpoint purge -n "$(azure.cdnEndpointName)" --profile-name "$(azure.cdnProfileName)" --content-paths "/*" --resource-group "$(azure.resourceGroup)" --no-wait
