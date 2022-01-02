@@ -7,6 +7,14 @@ pool:
 
 variables:
   blog.artifact: 'drop'
+  blog.path: './src'
+  hugo.version: '0.91.2'
+  azure.blobContainer: '\$web'
+  azure.subscription: 'NiksaSiteAzureConnection'
+  azure.keyVaultName: 'niksasitekeys'
+  azure.resourceGroup: 'niksadevsite'
+  azure.cdnEndpointName: 'niksadev'
+  azure.cdnProfileName: 'niksadevsitecdn'
 
 stages:
 - stage: BuildStage
@@ -14,10 +22,9 @@ stages:
   jobs:
   - job: BuildJob
     displayName: 'Build Site Job'
-    variables:
-      hugo.version: '0.91.2'
-      blog.path: './src'
     steps:
+    - checkout: self
+      submodules: true
     - script: |
         wget -c https://github.com/gohugoio/hugo/releases/download/v$(hugo.version)/hugo_$(hugo.version)_Linux-64bit.deb
       displayName: "Download Hugo"
@@ -44,18 +51,12 @@ stages:
   jobs:
   - job: ReleaseJob
     displayName: 'Release Site Job'
-    variables:
-      azure.blobContainer: '\$web'
-      azure.subscription: 'NiksaSiteAzureConnection'
-      azure.keyVaultName: 'niksasitekeys'
-      azure.resourceGroup: 'niksadevsite'
-      azure.cdnEndpointName: 'niksadev'
-      azure.cdnProfileName: 'niksadevsitecdn'
     steps:
+    - checkout: none
     - task: AzureKeyVault@2
       inputs:
-        connectedServiceName: '${{variables.azure.subscription}}'
-        keyVaultName: '${{variables.azure.keyVaultName}}'
+        connectedServiceName: '$(azure.subscription)'
+        keyVaultName: '$(azure.keyVaultName)'
     - task: DownloadPipelineArtifact@2
       displayName: 'Fetch from Artifact Store'
       inputs:
@@ -65,7 +66,7 @@ stages:
     - task: AzureCLI@2
       displayName: 'Send artifact to blob storage'
       inputs:
-        azureSubscription: '${{variables.azure.subscription}}'
+        azureSubscription: '$(azure.subscription)'
         scriptType: pscore
         scriptLocation: inlineScript
         inlineScript: |
@@ -74,7 +75,7 @@ stages:
     - task: AzureCLI@2
       displayName: 'Purge CDN content'
       inputs:
-        azureSubscription: '${{variables.azure.subscription}}'
+        azureSubscription: '$(azure.subscription)'
         scriptType: pscore
         scriptLocation: inlineScript
         inlineScript: |
