@@ -46,7 +46,7 @@ stages:
     displayName: 'Release Site Job'
     variables:
       azure.blobContainer: '\$web'
-      azure.subscription: '79cb5e21-82b5-4a49-9189-e11953dbfa37'
+      azure.subscription: 'NiksaSiteAzureConnection'
       azure.keyVaultName: 'niksasitekeys'
       azure.resourceGroup: 'niksadevsite'
       azure.cdnEndpointName: 'niksadev'
@@ -65,8 +65,8 @@ stages:
     - task: AzureCLI@2
       displayName: 'Send artifact to blob storage'
       inputs:
-        azureSubscription:
-        scriptType: ps
+        azureSubscription: '$(azure.subscription)'
+        scriptType: pscore
         scriptLocation: inlineScript
         inlineScript: |
           az storage blob delete-batch -s "$(azure.blobContainer)" --connection-string "$(AZURE-STORAGE-CONNECTION-STRING)"
@@ -74,8 +74,8 @@ stages:
     - task: AzureCLI@2
       displayName: 'Purge CDN content'
       inputs:
-        azureSubscription: 
-        scriptType: ps
+        azureSubscription: '$(azure.subscription)'
+        scriptType: pscore
         scriptLocation: inlineScript
         inlineScript: |
           az cdn endpoint purge -n "$(azure.cdnEndpointName)" --profile-name "$(azure.cdnProfileName)" --content-paths "/*" --resource-group "$(azure.resourceGroup)" --no-wait
