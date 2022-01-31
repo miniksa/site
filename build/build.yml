@@ -25,6 +25,7 @@ stages:
     steps:
     - checkout: self
       submodules: true
+      lfs: true
     - script: |
         wget -c https://github.com/gohugoio/hugo/releases/download/v$(hugo.version)/hugo_$(hugo.version)_Linux-64bit.deb
       displayName: "Download Hugo"
