@@ -1,5 +1,5 @@
 baseURL: 'https://www.niksa.dev'
-title: Niksa.dev
+title: Niksa's Notes
 paginate: 5
 theme: PaperMod
 
@@ -15,7 +15,7 @@ minify:
 params:
   profileMode:
     enabled: true # needs to be explicitly set
-    title: Niksa.dev
+    title: Niksa's Notes
     # imageUrl: '<img location>'
     # imageTitle: my image
     buttons:
