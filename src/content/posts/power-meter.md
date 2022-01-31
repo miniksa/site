@@ -36,7 +36,7 @@ And here's the solution for folks who have a smart meter and can get one of thes
 
 Ta-da. It shows the real-time (well... about 8 seconds delayed) usage and price all day every day! Now go flip stuff on and off and watch what happens!
 
-![A photo of the EMU-2 monitor on my desk reading out the current usage at 0.787kW and estimating I'm using 8.6 cents per hour of power right now. The red-yellow-green stop light to the left is showing yellow.](2022-01-30-emu-2.png)
+![A photo of the EMU-2 monitor on my desk reading out the current usage at 0.787kW and estimating I'm using 8.6 cents per hour of power right now. The red-yellow-green stop light to the left is showing yellow.](/2022-01-30-emu-2.png)
 
 I've noticed that the little stop-light on the left shows green for 0.5kWh or less, yellow for up 2kWh, and red beyond that.
 
@@ -66,7 +66,7 @@ utility_meter:
 ```
 
 4. Reboot. As you do when messing with *HACS* and the `configuration.yaml`.
-1. Go to **Configuration** > **Energy**. Then under the *Electricity Grid* heading, do **Add Consumption** and you should be able to choose `sensor.grid_energy_consumed`. Set a static price (which I did at 0.11 USD/kWh). And **Save**. Then wait a bit and it will start showing on the *Energy* dashboard! ![Screenshot of the Energy dashboard in Home Assistant displaying a bar graph of historical hourly data and an estimated total price for my home's power usage today.](2022-01-30-energy-dashboard.png)
+1. Go to **Configuration** > **Energy**. Then under the *Electricity Grid* heading, do **Add Consumption** and you should be able to choose `sensor.grid_energy_consumed`. Set a static price (which I did at 0.11 USD/kWh). And **Save**. Then wait a bit and it will start showing on the *Energy* dashboard! ![Screenshot of the Energy dashboard in Home Assistant displaying a bar graph of historical hourly data and an estimated total price for my home's power usage today.](/2022-01-30-energy-dashboard.png)
 1. For fun, I also added an *Entity* card to my usual dashboard set to `sensor.rainforest_energy_monitoring_unit` to get a little live view like this: ![Screenshot of entity card in Home Assistant interface reading out the current kWh consumption, just like the physical EMU-2 device.](/2022-01-30-entity.png)
 
 So that's that. Now I see the energy usage in Home Assistant aggregated over the day/week/month or as real time on the card on my usual dashboard. Or for funsies, I walk past the read-out on my desk when flipping things on and off through the day.
