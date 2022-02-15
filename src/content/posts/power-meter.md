@@ -66,6 +66,7 @@ utility_meter:
 ```
 
 4. Reboot. As you do when messing with *HACS* and the `configuration.yaml`.
+1. Go to **Configuration** > **Settings**. Choose the **General** tab at the top. Scroll down and ensure that the *Currency* field matches the currency you're going to use. (I set mine to **USD**.)
 1. Go to **Configuration** > **Energy**. Then under the *Electricity Grid* heading, do **Add Consumption** and you should be able to choose `sensor.grid_energy_consumed`. Set a static price (which I did at 0.11 USD/kWh). And **Save**. Then wait a bit and it will start showing on the *Energy* dashboard! ![Screenshot of the Energy dashboard in Home Assistant displaying a bar graph of historical hourly data and an estimated total price for my home's power usage today.](/2022-01-30-energy-dashboard.png)
 1. For fun, I also added an *Entity* card to my usual dashboard set to `sensor.rainforest_energy_monitoring_unit` to get a little live view like this: ![Screenshot of entity card in Home Assistant interface reading out the current kWh consumption, just like the physical EMU-2 device.](/2022-01-30-entity.png)
 
