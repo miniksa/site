@@ -29,7 +29,7 @@ params:
         url: about
 
   socialIcons:
-    - name: twitter
-      url: 'https://twitter.com/michaelniksa'
     - name: github
       url: 'https://github.com/miniksa'
+    - name: email
+      url: 'mailto:<FIRSTNAME>.<LASTNAME>@outlook.com'
