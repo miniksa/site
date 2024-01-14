@@ -40,6 +40,21 @@ So I've decided to give [rclone](https://rclone.org) a try or at least get it in
 1. Finish and start it. Double-click it in the list and move to the `Log` tab to see what's going on inside.
 1. Connect to `synology-ip:5572` to see the GUI and use `secret_user` and `secret_password` from above to log-in.
 
+### Making Configurations:
+It's very frustrating because it will be trying to launch a browser from the container for a bunch of stuff. I haven't figured out how to make it do the "headless" mode where it tells you to do a redirect.
+
+Instead, I went to download the [Windows edition](https://rclone.org/downloads/) of `rclone` so I could set up the config locally then upload it to `docker/rclone/config` on the remote end and just use the GUI to monitor.
+
+1. Download `rclone.exe` for Windows
+1. Open a Terminal and switch to that directory after unpacking it.
+1. Run `rclone config` to start adding configurations and logging in.
+1. Move the configuration onto the Synology overwriting the one in `docker/rclone/config`.
+
+### Finding the configuration:
+Couldn't really find it easily by Googling so I installed [everything by voidtools](https://www.voidtools.com/) and searched for `rclone.conf`.
+
+Turns out it's in `%APPDATA%\Roaming\rclone\rclone.conf`.
+
 ### Future:
 - Presumably I will have to expose more directories to the container to enable it to sync things by adding more **Volume Settings**
 - Mapping this in [Nginx Proxy Manager for Home Assistant](https://community.home-assistant.io/t/home-assistant-community-add-on-nginx-proxy-manager/111830) like I do other things... doesn't seem to want to work.
