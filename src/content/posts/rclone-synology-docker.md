@@ -53,10 +53,14 @@ Instead, I went to download the [Windows edition](https://rclone.org/downloads/)
 ### Finding the configuration:
 Couldn't really find it easily by Googling so I installed [everything by voidtools](https://www.voidtools.com/) and searched for `rclone.conf`.
 
-Turns out it's in `%APPDATA%\Roaming\rclone\rclone.conf`.
+Turns out it's in `%APPDATA%\rclone\rclone.conf`.
+
+### Syncing
+- You can't
+
+### Mounting
+- Once the config is loaded, one of the remotes can be mounted... though it will be inside the container. So I presume we'd have to add another **Volume Settings** to make it appear outside.
 
 ### Future:
-- Presumably I will have to expose more directories to the container to enable it to sync things by adding more **Volume Settings**
-- Mapping this in [Nginx Proxy Manager for Home Assistant](https://community.home-assistant.io/t/home-assistant-community-add-on-nginx-proxy-manager/111830) like I do other things... doesn't seem to want to work.
 - The authentication uses both basic auth and then asks again for auth on a web page. Maybe I can turn off the first basic auth? That seems silly.
 - This looks like it might be abandoned because the [Github Project repository](https://github.com/rclone/rclone-webui-react) hasn't been edited in 3-5 years... so I might just have to stick with Synology Cloud Sync or figure out how to script this CLI-style.
