@@ -64,27 +64,27 @@ tags: ["home automation", "zigbee", "ikea", "home assistant"]
 
 ### Ikea Tradfri Button
 #### Front
-![Photo of the front side of the Tradfri Shortcut Button. It is a rounded corner square and mostly white. A small logo of a ceiling mounted lamp in a very basic style is printed in the center.](../../static/2025-01-02-Tradfri-Button-Front.jpg)
+![Photo of the front side of the Tradfri Shortcut Button. It is a rounded corner square and mostly white. A small logo of a ceiling mounted lamp in a very basic style is printed in the center.](/2025-01-02-Tradfri-Button-Front.jpg)
 
 #### Back
-![Photo of the reverse side of the Tradfri Shortcut Button. Model numbers, names, voltages, FCC IDs, and other regulatory information is visible including an IP44 rating.](../../static/2025-01-02-Tradfri-Button-Back.jpg)
+![Photo of the reverse side of the Tradfri Shortcut Button. Model numbers, names, voltages, FCC IDs, and other regulatory information is visible including an IP44 rating.](/2025-01-02-Tradfri-Button-Back.jpg)
 
 #### Inside
-![Photo of the inside reverse of the button. A Duracell CR 2032 battery is in place for most of the device. The top right corner shows a small levered button with a logo of a chain beside it as the pairing button. A screw hole is visible at the bottom where the back cover attaches.](../../static/2025-01-02-Tradfri-Button-Inside.jpg)
+![Photo of the inside reverse of the button. A Duracell CR 2032 battery is in place for most of the device. The top right corner shows a small levered button with a logo of a chain beside it as the pairing button. A screw hole is visible at the bottom where the back cover attaches.](/2025-01-02-Tradfri-Button-Inside.jpg)
 
 
 ### Ikea Tradfri Button Box
 #### Front
-![Photo of the front side of the Tradfri button box. A picture of the device, its name, marketing information for the app, a Zigbee logo, and an Ikea product quality symbol are visible as well as a sample usage. Also lists what is included in the box (button, stickers) and not included (gateway).](../../static/2025-01-02-Tradfri-Button-Box-Front.jpg)
+![Photo of the front side of the Tradfri button box. A picture of the device, its name, marketing information for the app, a Zigbee logo, and an Ikea product quality symbol are visible as well as a sample usage. Also lists what is included in the box (button, stickers) and not included (gateway).](/2025-01-02-Tradfri-Button-Box-Front.jpg)
 #### Back
-![Photo of the reverse side of the Tradfri button box. Regulatory information, Ikea stock numbers, barcodes, and a message that the Ikea Gateway is Required in over a dozen languages is printed.](../../static/2025-01-02-Tradfri-Button-Box-Back.jpg)
+![Photo of the reverse side of the Tradfri button box. Regulatory information, Ikea stock numbers, barcodes, and a message that the Ikea Gateway is Required in over a dozen languages is printed.](/2025-01-02-Tradfri-Button-Box-Back.jpg)
 
 ### Nortek Stick
 #### Front
-![Photo of Nortek Security & Control USB dongle model HUSBZB-1 from the front. Nortek Security and Control logo is visible.](../../static/2025-01-02-Nortek-Stick-Front.jpg)
+![Photo of Nortek Security & Control USB dongle model HUSBZB-1 from the front. Nortek Security and Control logo is visible.](/2025-01-02-Nortek-Stick-Front.jpg)
 
 #### Back
-![Photo of Nortek Security & Control USB dongle model HUSBZB-1 from the back. Serial, model number, and regulatory information is visible as is the end of an AmazonBasics USB extension cable plugging into the device.](../../static/2025-01-02-Nortek-Stick-Back.jpg)
+![Photo of Nortek Security & Control USB dongle model HUSBZB-1 from the back. Serial, model number, and regulatory information is visible as is the end of an AmazonBasics USB extension cable plugging into the device.](/2025-01-02-Nortek-Stick-Back.jpg)
 
 ### Home Assistant UI
 
@@ -92,41 +92,41 @@ tags: ["home automation", "zigbee", "ikea", "home assistant"]
 
 ZHA Integration page featuring *CONFIGURE* link:
 
-![The Home Assistant Zigbee Home Automation integration page. One instance of the integration is visible with a blue CONFIGURE link to the top right](../../static/2025-01-02-ZHA-Configure.png)
+![The Home Assistant Zigbee Home Automation integration page. One instance of the integration is visible with a blue CONFIGURE link to the top right](/2025-01-02-ZHA-Configure.png)
 
 ZHA Integration Configuration page featuring *+ ADD DEVICE* button:
 
-![The Home Assistant Zigbee Home Automation integration configuration page. In the lower right corner is the Add Device button](../../static/2025-01-02-ZHA-AddDevice.png)
+![The Home Assistant Zigbee Home Automation integration configuration page. In the lower right corner is the Add Device button](/2025-01-02-ZHA-AddDevice.png)
 
 ZHA Integration searching for devices:
 
-![A Searching for Zigbee devices page from the ZHA integration after Add Device was clicked. Some instructions and documentation are listed.](../../static/2025-01-02-ZHA-Searching.png)
+![A Searching for Zigbee devices page from the ZHA integration after Add Device was clicked. Some instructions and documentation are listed.](/2025-01-02-ZHA-Searching.png)
 
 ZHA Integration found device and configuring:
 
-![Searching for Zigbee devices page from the ZHA integration when the button is found and configuring. A blue rounded rectangle with model and address information is visible.](../../static/2025-01-02-ZHA-Tradfri-Configuring.png)
+![Searching for Zigbee devices page from the ZHA integration when the button is found and configuring. A blue rounded rectangle with model and address information is visible.](/2025-01-02-ZHA-Tradfri-Configuring.png)
 
 ZHA Integration found device and complete; allows name and location setup:
 
-![Searching for Zigbee devices page from the ZHA integration when the button is found and configuring. A green rounded rectangle with the device title, some icons, and two fields: "change device name" with a text box and "area" with a drop down are visible.](../../static/2025-01-02-ZHA-Tradfri-Ready.png)
+![Searching for Zigbee devices page from the ZHA integration when the button is found and configuring. A green rounded rectangle with the device title, some icons, and two fields: "change device name" with a text box and "area" with a drop down are visible.](/2025-01-02-ZHA-Tradfri-Ready.png)
 
 Specific ZHA device page featuring the *...* link with pop-up menu and the *Manage zigbee device* field:
 
-![The specific device page for the Tradfri button inside Home Assistant. Many regions are visible, but the focus is to the top-left most region of Device Information and then the lower right corner of that where the `...` link is opened to show a pop-up menu with 4 options. The top one entitled "Manage zigbee device" is the important one.](../../static/2025-01-02-ZHA-Manage-Zigbee-Device.png)
+![The specific device page for the Tradfri button inside Home Assistant. Many regions are visible, but the focus is to the top-left most region of Device Information and then the lower right corner of that where the `...` link is opened to show a pop-up menu with 4 options. The top one entitled "Manage zigbee device" is the important one.](/2025-01-02-ZHA-Manage-Zigbee-Device.png)
 
 *Manage zigbee device* dialog featuring the *Bindings* tab where the **BIND** button can be triggered against the Zigbee hub:
 
-![Screenshot of Manage Zigbee Device page in Home Assistant. The Bindings tab in the center of the top row is selected. The focus area is the first group region with a dropdown titled "Bindable devices" with "HubZ ZigBee HUSBZB-1" option selected. Two buttons are active below this field, BIND and UNBIND. Another group region with a table of checkboxes, names, and IDs for Bindable groups is below.](../../static/2025-01-02-tradfri-bind-hub.png)
+![Screenshot of Manage Zigbee Device page in Home Assistant. The Bindings tab in the center of the top row is selected. The focus area is the first group region with a dropdown titled "Bindable devices" with "HubZ ZigBee HUSBZB-1" option selected. Two buttons are active below this field, BIND and UNBIND. Another group region with a table of checkboxes, names, and IDs for Bindable groups is below.](/2025-01-02-tradfri-bind-hub.png)
 
 #### zha_event Debugging
 
 How to set up event listening:
 
-![Screenshot of the Developer Tools, Events page in Home Assistant. The top region allows firing an event manually. The next region down says Listen to Events. `zha_event` is in the field and is grayed out as active. The button says `Stop Listening` and `Clear Events` and below is one event's output](../../static/2025-01-02-zha_event_listen.png)
+![Screenshot of the Developer Tools, Events page in Home Assistant. The top region allows firing an event manually. The next region down says Listen to Events. `zha_event` is in the field and is grayed out as active. The button says `Stop Listening` and `Clear Events` and below is one event's output](/2025-01-02-zha_event_listen.png)
 
 Sample event received:
 
-![Screenshot of a zha_event arriving in the Home Assisstant developer tools page. Many fields of JSON information are visible including the timestamp of the event, addressing information for the message, and a command string of "on"](../../static/2025-01-02-zha_event_confirmed.png)
+![Screenshot of a zha_event arriving in the Home Assisstant developer tools page. Many fields of JSON information are visible including the timestamp of the event, addressing information for the message, and a command string of "on"](/2025-01-02-zha_event_confirmed.png)
 
 
 
