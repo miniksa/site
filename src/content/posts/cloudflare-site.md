@@ -10,7 +10,7 @@ tags: ["site"]
 ## Background
 I was informed over and over the last few weeks about the [imminent closure](https://www.theregister.com/2025/01/02/microsoft_endpoint_change/) of [Azure CDN by Edgio](https://learn.microsoft.com/en-us/azure/cdn/edgio-retirement-faq).
 
-I mostly didn't care and was going to let them try to migrate for me. But when I published the earlier page today about my [Ikea Tradfri Button Fun]({{ ref "tradfri-shortcut.md" }}), I noticed that the good ol' [key expired]({{ ref "renew-azure-key.md" }}).
+I mostly didn't care and was going to let them try to migrate for me. But when I published the earlier page today about my [Ikea Tradfri Button Fun]({{< relref "tradfri-shortcut.md" >}}), I noticed that the good ol' [key expired]({{< relref "renew-azure-key.md" >}}).
 
 So. Since this site is barebones and since I spent 2024 trying a handful of services from Cloudflare because Google Domains [sold out](https://www.theregister.com/2023/06/18/google_domains_shutting_down/), I decided to try setting up pages on Cloudflare too.
 
